@@ -42,5 +42,5 @@ print("Best params:", grid.best_params_)
 print(classification_report(ytest, best_model.predict(Xtest)))
 
 # Save next to app.py so the Streamlit app can load it directly
-joblib.dump(best_model, "deployment/wellness_package_predictor_best_model_v1.joblib")
-print("Model saved to deployment/wellness_package_predictor_best_model_v1.joblib")
+joblib.dump(best_model, "tourism_project/deployment/wellness_package_predictor_best_model_v1.joblib")
+print("Model saved to tourism_project/deployment/wellness_package_predictor_best_model_v1.joblib")

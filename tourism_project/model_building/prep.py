@@ -2,17 +2,17 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 #loading data directly from the registered folder only
-df = pd.read_csv("data/tourism.csv")#loading data directly from the registered folder only
+df = pd.read_csv("tourism_project/data/tourism.csv")#loading data directly from the registered folder only
 
-#CustomerID: This is a unique random identifier per customer. 
+#CustomerID: This is a unique random identifier per customer.
 #It provides no predictive power and causes overfitting if kept.
 df.drop(columns=["CustomerID"], inplace=True)
 
 #setting up X and y variables
 
 X = df.drop(columns=["ProdTaken"])
-#ProdTaken: This is your target/label column (the value your model wants to predict). 
-#It must be separated from your features 
+#ProdTaken: This is your target/label column (the value your model wants to predict).
+#It must be separated from your features
 y = df["ProdTaken"]
 
 # stratify=y keeps the (imbalanced) failure ratio consistent across splits
